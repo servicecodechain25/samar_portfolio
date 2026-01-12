@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d9dede;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll during animation */
+}
+
+/* ============================= */
+/* TOP BANNER WITH ANIMATION */
+/* ============================= */
+.top-banner {
+    width: 30%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 80px auto 40px;
+    opacity: 0;
+    transform: translateY(-100px); /* Start above viewport */
+    animation: slideDown 1s ease-out 0.3s forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* THREE IMAGES SECTION WITH ANIMATION */
+/* ============================= */
+.three-images {
+    width: 100%;
+    max-width: 1500px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.three-images img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Left image animation */
+.three-images img:nth-child(1) {
+    animation: slideInLeft 1s ease-out 0.8s forwards;
+}
+
+/* Center image animation */
+.three-images img:nth-child(2) {
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+/* Right image animation */
+.three-images img:nth-child(3) {
+    animation: slideInRight 1s ease-out 0.8s forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================= */
+/* FULL WIDTH CENTER IMAGE */
+/* ============================= */
+.full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 60px 0;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: zoomIn 1s ease-out 1.3s forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ============================= */
+/* LAST SECTION WITH ANIMATION */
+/* ============================= */
+.last-section {
+    width: 100%;
+    max-width: 1600px;
+    margin: 100px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 0 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.6s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ============================= */
+/* LEFT SIDE */
+/* ============================= */
+.last-left {
+    flex: 1.5;
+}
+
+/* HEADING */
+.text-block h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #222;
+    margin-bottom: -20px;
+}
+
+/* PARAGRAPH */
+.last-left p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #444;
+    max-width: 800px;
+    margin-bottom: 22px;
+}
+
+/* LEFT IMAGE */
+.last-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -100px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s ease-out 2s forwards;
+}
+
+/* ============================= */
+/* RIGHT SIDE WITH ANIMATION */
+/* ============================= */
+.last-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.last-right img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+    margin-top: -157px;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 1s ease-out 2s forwards;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+    .last-section {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 1.2s forwards;
+    }
+
+    .last-left p {
+        max-width: 100%;
+    }
+
+    .last-left img,
+    .last-right img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* Mobile animation adjustments */
+    .three-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .three-images img {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .three-images img:nth-child(1),
+    .three-images img:nth-child(2),
+    .three-images img:nth-child(3) {
+        animation: fadeInUp 1s ease-out 0.8s forwards;
+    }
+}
