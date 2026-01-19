@@ -13,39 +13,33 @@
 
     <!-- CSS
     ================================================== -->
-    <!-- <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/styles.css"> -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/projects.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-         <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <!-- favicons ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- AOS Animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="../apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="../icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="../icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="../manifest" href="site.webmanifest">
+    
     <style>
-        body{
+        body {
             background-color: #910808;
         }
+
         .concept-box {
             position: absolute;
             top: 50%;
-            /* transform: translateY(-50%); */
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -70,7 +64,6 @@
         /* Image */
         .concept-image {
             width: 100%;
-            /* max-width: 400px; */
             height: auto;
             margin-top: 1rem;
         }
@@ -94,14 +87,16 @@
 
         /* Mobile */
         @media (max-width: 768px) {
-            .concept-parent{
+            .concept-parent {
                 text-align: center;
             }
-            .concept-parent img{
+
+            .concept-parent img {
                 height: 350px;
                 margin-top: -3rem;
                 margin-left: -1rem;
             }
+
             .concept-box {
                 position: relative;
                 top: -10%;
@@ -118,7 +113,8 @@
             .concept-image {
                 margin: 1rem auto 0;
             }
-            .last-img{
+
+            .last-img {
                 margin-top: -12rem;
             }
         }
@@ -133,48 +129,53 @@
             <div></div>
         </div>
     </div>
+
     <!-- # site header 
-        ================================================== -->
-        <header class="s-header">
-            <div class="row s-header__inner">
+    ================================================== -->
+    <header class="s-header">
+        <div class="row s-header__inner">
 
-                <div class="s-header__block">
-                    <div class="s-header__logo">
-                        <a class="logo" href="index.html">
-                            <!-- <img src="images/logo.svg" alt="Homepage"> -->
-                        </a>
-                    </div>
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="../index.html">
+                        <!-- <img src="../images/logo.svg" alt="Homepage"> -->
+                    </a>
+                </div>
 
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div> <!-- end s-header__block -->
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div> <!-- end s-header__block -->
 
-                <nav class="s-header__nav">    
-                    <ul class="s-header__menu-links">
-                        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                        <li><a class="smoothscroll" href="#about">About</a></li>
-                        <li><a class="smoothscroll" href="#works">Works</a></li>
-                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
-                    </ul> <!-- s-header__menu-links -->    
-                </nav> <!-- end s-header__nav -->
+            <nav class="s-header__nav">
+                <ul class="s-header__menu-links">
+                    <!-- Intro link - index.html ke intro section par jayega -->
+                    <li><a href="../index.html#intro">Intro</a></li>
+                    
+                    <!-- About link - index.html ke about section par jayega -->
+                    <li><a href="../index.html#about">About</a></li>
+                    
+                    <!-- Works link - index.html ke works section par jayega -->
+                    <li><a href="../index.html#works">Works</a></li>
+                    
+                    <!-- Contact link - index.html ke footer section par jayega -->
+                    <li><a href="../index.html#footer">Contact</a></li>
+                </ul> <!-- s-header__menu-links -->
+            </nav> <!-- end s-header__nav -->
 
-            </div> <!-- end s-header__inner -->
-        </header> <!-- end s-header -->
-
+        </div> <!-- end s-header__inner -->
+    </header> <!-- end s-header -->
 
     <div id="page" class="s-pagewrap position-relative">
-        <img src="../images/amstelBeer/4.png" alt="" srcset="" class="img-fluid">
+        <img src="../images/amstelBeer/4.png" alt="Amstel Beer Banner" class="img-fluid">
         <div class="row position-absolute" style="top: 30%">
             <div class="col-lg-6 position-relative concept-parent">
-                <img src="../images/amstelBeer/3.png" alt="" srcset="" class="img-fluid" data-aos="fade-right" data-aos-offset="200"
-                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
-                data-aos-mirror="true" data-aos-once="false">
-                <div class="concept-box" data-aos="fade-right" data-aos-offset="200"
-                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
-                data-aos-mirror="true" data-aos-once="false">
+                <img src="../images/amstelBeer/3.png" alt="Amstel Beer Concept" class="img-fluid" data-aos="fade-right" data-aos-offset="200"
+                    data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true"
+                    data-aos-once="false">
+                <div class="concept-box" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
                     <p class="concept-title">CONCEPT:-</p>
                     <p class="concept-text">
-                        IT'S THE RMSTEL WRY
-                        OR THE HIGHWRY.
+                        IT'S THE AMSTEL WAY OR THE HIGHWAY.
                         Where there is beer, there is an Amstel way" captures the spirit of our 150-year celebration,
                         marrying bold heritage with modern edge: against a vibrant red backdrop echoes of Amsterdam's
                         canals and alpine landscapes frame a dew-dropped can of Amstel Super Premium Strong Beer—its
@@ -186,12 +187,11 @@
                 </div>
 
             </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-offset="200"
-            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
-            data-aos-mirror="true" data-aos-once="false">
-                <img src="../images/amstelBeer/1.png" alt="" srcset="" class="img-fluid last-img" data-aos="fade-right" data-aos-offset="200"
-                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
-                data-aos-mirror="true" data-aos-once="false">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+                <img src="../images/amstelBeer/1.png" alt="Amstel Beer Product" class="img-fluid last-img"
+                    data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
             </div>
         </div>
     </div>
