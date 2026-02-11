@@ -4505,9 +4505,9 @@ td:last-child {
         right: -2rem;
     }
 }
-
-.entry__thumb img {
-    height: 500px;
-    width: 490px;
+.entry__thumb img{
+    height: 550px;
+    width: 650px;
+    margin-top: -47px;
     object-fit: cover;
 }
