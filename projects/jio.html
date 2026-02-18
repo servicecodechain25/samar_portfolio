@@ -1,280 +1,466 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Greate White</title>
 
     <script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
     </script>
 
     <!-- CSS
     ================================================== -->
     <!-- <link rel="stylesheet" href="../css/vendor.css">
     <link rel="stylesheet" href="../css/styles.css"> -->
-    <link rel="stylesheet" href="../css/projects.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/projects.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/vendor.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <!-- favicons ================================================== -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="../apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="../icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="../icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="../manifest" href="site.webmanifest">
+    <link
+      rel="../apple-touch-icon"
+      sizes="180x180"
+      href="apple-touch-icon.png"
+    />
+    <link
+      rel="../icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png"
+    />
+    <link
+      rel="../icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon-16x16.png"
+    />
+    <link rel="../manifest" href="site.webmanifest" />
     <style>
-       *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-/* =====================================================
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* =====================================================
    GLOBAL BACKGROUND
 ===================================================== */
-body {
-    background: url("../images/jio/7.png");
-}
+      body {
+        background: url("../images/jio/7.png");
+        min-width: 1420px;
+        transform-origin: top center;
+      }
 
-
-/* =====================================================
+      /* =====================================================
    PAGE WRAPPER
 ===================================================== */
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 30px 0;
-}
+      .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 30px 0;
+      }
 
-
-/* =====================================================
+      /* =====================================================
    BANNER BLOCK
 ===================================================== */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 70px;
-    overflow: visible; /* allow elements to overflow */
-    border-radius: 6px;
-}
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 70px;
+        overflow: visible;
+        /* allow elements to overflow */
+        border-radius: 6px;
+      }
 
-
-/* =====================================================
+      /* =====================================================
    ART CONTAINER
 ===================================================== */
-.art {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+      .art {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
-
-/* =====================================================
+      /* =====================================================
    MAIN IMAGES
 ===================================================== */
-.art img.mains {
-    position: absolute;
-    width: 72%;
-    left: 330px;
-    top: -247px;
-    z-index: 2;
-}
+      .art img.mains {
+        position: absolute;
+        width: 72%;
+        left: 330px;
+        top: -247px;
+        z-index: 2;
+      }
 
-.art img.main {
-    position: absolute;
-    width: 72%;
-    left: 500px;
-    top: 60px;
-    z-index: 2;
-}
+      .art img.main {
+        position: absolute;
+        width: 72%;
+        left: 500px;
+        top: 60px;
+        z-index: 2;
+      }
 
-.art img.mainse {
-    position: absolute;
-    width: 72%;
-    left: 125px;
-    top: 330px;
-    z-index: 2;
-}
+      .art img.mainse {
+        position: absolute;
+        width: 72%;
+        left: 125px;
+        top: 330px;
+        z-index: 2;
+      }
 
-
-/* =====================================================
+      /* =====================================================
    FLOATING PROPS
 ===================================================== */
-.dumbbell {
-    position: absolute;
-    width: 200px;
-    left: -70px;
-    bottom: -280px;
-    z-index: 3;
-}
+      .dumbbell {
+        position: absolute;
+        width: 200px;
+        left: -50px;
+        bottom: -280px;
+        z-index: 3;
+      }
 
-.clock {
-    position: absolute;
-    width: 150px;
-    right: 331px;
-    bottom: -250px;
-    z-index: 3;
-}
+      .clock {
+        position: absolute;
+        width: 150px;
+        right: 331px;
+        bottom: -250px;
+        z-index: 3;
+      }
 
-
-/* =====================================================
+      /* =====================================================
    COLOR PANELS (OPTIONAL)
 ===================================================== */
-/*
+      /*
 .orange { background: #f47c2c; }
 .cyan   { background: #2fc6c6; }
 .red    { background: #c62828; }
 */
 
-
-/* =====================================================
+      /* =====================================================
    CONCEPT SECTION
 ===================================================== */
-.concept {
-    position: relative;
-    height: 300px;
-    margin-top: 40px;
-}
+      .concept {
+        position: relative;
+        height: 300px;
+        margin-top: 40px;
+      }
 
-.concept img {
-    position: absolute;
-    width: 350px;
-    left: 250px;
-    bottom: 0;
-    transform: translateY(1000px);
-}
+      .concept img {
+        position: absolute;
+        width: 350px;
+        left: 250px;
+        bottom: 0;
+        transform: translateY(1000px);
+      }
 
+      .concept-text {
+        max-width: 800px;
+        margin-left: 550px;
+        padding-top: 750px;
+      }
 
-.concept-text {
-    max-width: 800px;
-    margin-left: 550px;
-    padding-top: 750px;
-}
+      .concept-text h3 {
+        margin-bottom: 15px;
+      }
 
-.concept-text h3 {
-    margin-bottom: 15px;
-}
+      .concept-text p {
+        font-size: 13px;
+        line-height: 1.6;
+      }
 
-.concept-text p {
-    font-size: 13px;
-    line-height: 1.6;
-}
+      /* ----------->RESPONSIVE MEDIA QUERY<---------  */
 
+      /* ===== <= 1420px ===== */
+      @media (max-width: 1420px) {
+        .wrapper {
+          width: 1000px;
+        }
+
+        .art img.mains {
+          width: 65%;
+          left: 260px;
+          top: -200px;
+        }
+
+        .art img.main {
+          width: 65%;
+          left: 380px;
+          top: 40px;
+        }
+
+        .art img.mainse {
+          width: 65%;
+          left: 90px;
+          top: 260px;
+        }
+
+        .dumbbell {
+          width: 160px;
+          left: -4px;
+          bottom: -220px;
+        }
+
+        .clock {
+          width: 120px;
+          left: calc(58% + 230px);
+          top: 10px;
+          transform: translate(-50%, 100%);
+        }
+
+        .concept img {
+          width: 280px;
+          left: 180px;
+          transform: translateY(750px);
+        }
+
+        .concept-text {
+          margin-left: 420px;
+          padding-top: 560px;
+        }
+      }
+
+      /* ===== <= 850px ===== */
+      @media (max-width: 850px) {
+        .wrapper {
+          width: 600px;
+        }
+
+        .art img.mains {
+          width: 65%;
+          left: 156px;
+          top: -120px;
+        }
+
+        .art img.main {
+          width: 65%;
+          left: 228px;
+          top: 24px;
+        }
+
+        .art img.mainse {
+          width: 65%;
+          left: 54px;
+          top: 156px;
+        }
+
+        .dumbbell {
+          width: 190px;
+          left: -3px;
+          bottom: -200px;
+        }
+
+        .clock {
+          width: 150px;
+          left: calc(57% + 140px);
+          top: 0px;
+          transform: translate(-50%, 118%);
+        }
+
+        .concept img {
+          width: 168px;
+          left: 108px;
+          transform: translateY(450px);
+        }
+
+        .concept-text {
+          margin-left: 252px;
+          padding-top: 336px;
+        }
+      }
+
+      /* ===== <= 350px ===== */
+      @media (max-width: 350px) {
+        .wrapper {
+          width: 340px;
+        }
+
+        .art img.mains {
+          width: 65%;
+          left: 73px;
+          top: -56px;
+        }
+
+        .art img.main {
+          width: 65%;
+          left: 106px;
+          top: 11px;
+        }
+
+        .art img.mainse {
+          width: 65%;
+          left: 25px;
+          top: 73px;
+        }
+
+        .dumbbell {
+          width: 85px;
+          left: -2px;
+          bottom: -70px;
+        }
+
+        .clock {
+          width: 55px;
+          right: 60px;
+          bottom: -50px;
+        }
+
+        .concept img {
+          width: 78px;
+          left: 50px;
+          transform: translateY(210px);
+        }
+
+        .concept-text {
+          margin-left: 118px;
+          padding-top: 158px;
+        }
+      }
+
+      /* ===============================
+   NAVBAR DROPDOWN FIX (NO EDITS)
+   =============================== */
     </style>
-</head>
+  </head>
 
-<body id="top">
+  <body id="top">
     <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
     <!-- # site header 
         ================================================== -->
     <header class="s-header">
-        <div class="row s-header__inner">
+      <div class="row s-header__inner">
+        <div class="s-header__block">
+          <div class="s-header__logo">
+            <a class="logo" href="../index.html">
+              <!-- <img src="images/logo.svg" alt="Homepage"> -->
+            </a>
+          </div>
 
-            <div class="s-header__block">
-                <div class="s-header__logo">
-<a class="logo" href="../index.html">
-                        <!-- <img src="images/logo.svg" alt="Homepage"> -->
-                    </a>
-                </div>
+          <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+        <!-- end s-header__block -->
 
-                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-            </div> <!-- end s-header__block -->
+        <nav class="s-header__nav">
+          <ul class="s-header__menu-links">
+            <li>
+              <a href="../index.html#intro">Intro</a>
+            </li>
+            <li>
+              <a href="../index.html#about">About</a>
+            </li>
+            <li>
+              <a href="../index.html#works">Works</a>
+            </li>
+            <li>
+              <a href="../index.html#footer">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- end s-header__inner -->
+    </header>
+    <!-- end s-header -->
 
-           <nav class="s-header__nav">
-    <ul class="s-header__menu-links">
-        <li>
-            <a href="../index.html#intro">Intro</a>
-        </li>
-        <li>
-            <a href="../index.html#about">About</a>
-        </li>
-        <li>
-            <a href="../index.html#works">Works</a>
-        </li>
-        <li>
-            <a href="../index.html#footer">Contact</a>
-        </li>
-    </ul>
-</nav>
-
-        </div> <!-- end s-header__inner -->
-    </header> <!-- end s-header -->
-
-  <!-- BANNER 1 -->
-<div class="raza" style="text-align:right;">
-    <img src="../images/jio/1.png" alt="" style="width:300px; height:auto; margin-top: 70px;">
-</div>
-
-  <div class="banner orange">
-    <div class="art">
-      <img src="../images/jio/3.png" class="mains">
-      <!-- <img src="../images/jio/8.png" class="dumbbell"> -->
-      <img src="../images/jio/2.png" class="clock">
+    <!-- BANNER 1 -->
+    <div class="raza" style="text-align: right">
+      <img
+        src="../images/jio/1.png"
+        alt=""
+        style="width: 300px; height: auto; margin-top: 70px"
+      />
     </div>
-  </div>
 
-  <!-- BANNER 2 -->
-  <div class="banner cyan">
-    <div class="art">
-      <img src="../images/jio/5.png" class="main">
-      <img src="../images/jio/8.png" class="dumbbell">
-      <!-- <img src="../images/jio/2.png" class="clock"> -->
+    <div class="banner orange">
+      <div class="art">
+        <img src="../images/jio/3.png" class="mains" />
+        <!-- <img src="../images/jio/8.png" class="dumbbell"> -->
+        <img src="../images/jio/2.png" class="clock" />
+      </div>
     </div>
-  </div>
 
-  <!-- BANNER 3 -->
-  <div class="banner red">
-    <div class="art">
-      <img src="../images/jio/6.png" class="mainse">
+    <!-- BANNER 2 -->
+    <div class="banner cyan">
+      <div class="art">
+        <img src="../images/jio/5.png" class="main" />
+        <img src="../images/jio/8.png" class="dumbbell" />
+        <!-- <img src="../images/jio/2.png" class="clock"> -->
+      </div>
     </div>
-  </div>
 
-  <!-- CONCEPT -->
-  <div class="concept">
-    <img src="../images/jio/4.png">
-    <div class="concept-text">
-      <h4>CONCEPT  :-</h4>
-      <p>
-  The visual positions Bigg Buzz as the ultimate gateway into everything that escapes from the Bigg Boss house—every secret, every spark, and every moment of drama that fans crave. By placing the hosts in a vibrant, exaggerated world filled with oversized props like walkie-talkies, magnifying glasses, buzzers and quirky "drama detectors," the design brings alive the idea that Bigg Buzz is where all the hidden action gets caught, decoded and revealed. The playful chaos of bursting elements, bold colours and animated reactions creates an energetic atmosphere that reflects the show's humour, excitement and unpredictability. This creative direction reinforces Bigg Buzz as India's go-to destination for fresh updates, hot takes and unfiltered behind-the-scenes chatter - delivered instantly and exclusively on JioCinema.
-</p>
+    <!-- BANNER 3 -->
+    <div class="banner red">
+      <div class="art">
+        <img src="../images/jio/6.png" class="mainse" />
+      </div>
     </div>
-  </div>
+
+    <!-- CONCEPT -->
+    <div class="concept">
+      <img src="../images/jio/4.png" />
+      <div class="concept-text">
+        <h4>CONCEPT :-</h4>
+        <p>
+          The visual positions Bigg Buzz as the ultimate gateway into everything
+          that escapes from the Bigg Boss house—every secret, every spark, and
+          every moment of drama that fans crave. By placing the hosts in a
+          vibrant, exaggerated world filled with oversized props like
+          walkie-talkies, magnifying glasses, buzzers and quirky "drama
+          detectors," the design brings alive the idea that Bigg Buzz is where
+          all the hidden action gets caught, decoded and revealed. The playful
+          chaos of bursting elements, bold colours and animated reactions
+          creates an energetic atmosphere that reflects the show's humour,
+          excitement and unpredictability. This creative direction reinforces
+          Bigg Buzz as India's go-to destination for fresh updates, hot takes
+          and unfiltered behind-the-scenes chatter - delivered instantly and
+          exclusively on JioCinema.
+        </p>
+      </div>
+    </div>
 
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-</body>
-
+  </body>
 </html>
