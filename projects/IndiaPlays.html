@@ -1,333 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IndiaPlay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiaplays</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
-<style>
-/* RESET */
-body{
-margin:0;
-padding:0;
-font-family:Arial;
-}
+    <!-- CSS
+    ================================================== -->
+    <!-- <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css"> -->
+    <link rel="stylesheet" href="../css/projects.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
-/* ================= HEADER ================= */
-
-.s-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#111;
-z-index:9999;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.s-header__inner{
-display:flex;
-align-items:center;
-justify-content:flex-end;
-padding:18px 30px;
-position:relative;
-}
-
-/* DESKTOP MENU */
-
-.s-header__menu-links{
-display:flex;
-gap:35px;
-list-style:none;
-margin:0;
-padding:0;
-}
-
-.s-header__menu-links a{
-text-decoration:none;
-color:#fff;
-font-weight:500;
-}
-
-/* ===== HAMBURGER ===== */
-
-.mobile-toggle{
-display:none;
-width:34px;
-height:26px;
-position:absolute;
-right:25px;
-top:18px;
-background:none;
-border:none;
-cursor:pointer;
-z-index:10001;
-}
-
-.mobile-toggle span{
-display:block;
-height:3px;
-background:#fff;
-margin:6px 0;
-transition:0.35s;
-}
-
-/* TO X */
-
-.mobile-toggle.active span:nth-child(1){
-transform:translateY(9px) rotate(45deg);
-}
-.mobile-toggle.active span:nth-child(2){
-opacity:0;
-}
-.mobile-toggle.active span:nth-child(3){
-transform:translateY(-9px) rotate(-45deg);
-}
-
-/* ================= PAGE DESIGN ================= */
-
-/* LOGO */
-.logo{
-position:absolute;
-top:90px;
-left:50%;
-transform:translateX(-50%);
-z-index:10;
-}
-
-.logo img{width:180px;}
-
-/* POSTER */
-
-.poster-wrapper{
-position:relative;
-width:100%;
-overflow:hidden;
-overflow:visible;   /* ⭐ IMPORTANT — text cut nahi hoga */
-/* padding-bottom:220px;   space for concept */
-}
-
-.poster{
-width:100%;
-height:auto;
-display:block;
-}
-
-/* MOBILE SCREEN */
-
-.mobile-screen{
-position:absolute;
-top:17%;
-left:50%;
-transform:translateX(-50%);
-width:59%;
-z-index:5;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.mobile-screen img{
-width:100%;
-height:auto;
-display:block;
-}
-
-/* FLOATING CHIPS */
-
-.chip-left{
-position:absolute;
-top:8%;
-width:330px;
-z-index:20;
-}
-
-.chip-right{
-position:absolute;
-bottom:12%;
-right:5%;
-width:500px;
-z-index:20;
-}
-
-/* CONCEPT */
-
-.concept{
-position:absolute;
-bottom:100px;
-left:50%;
-transform:translateX(-50%);
-max-width:1000px;
-width:90%;
-color:#1f1f1f;
-}
-
-.concept h5{
-font-weight:700;
-margin-bottom:10px;
-}
-
-.concept p{
-font-size:15px;
-line-height:1.7;
-margin:0;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-/* SHOW HAMBURGER */
-.mobile-toggle{display:block;}
-
-/* SIDE MENU */
-.s-header__nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100vh;
-background:#fff;
-padding-top:90px;
-box-shadow:-5px 0 25px rgba(0,0,0,0.15);
-transition:0.35s ease;
-z-index:10000;
-}
-
-.s-header__nav.active{right:0;}
-
-.s-header__menu-links{
-flex-direction:column;
-gap:25px;
-padding-left:30px;
-}
-
-.s-header__nav a{
-color:#111;
-font-size:18px;
-}
-
-/* LOGO */
-.logo img{width:140px;}
-
-/* CHIPS */
-.chip-left,
-.chip-right{width:90px;}
-
-/* MOBILE SCREEN FIX */
-.mobile-screen{
-top:15%;
-width:78%;
-}
-
-/* ⭐ IMPORTANT: desktop unaffected, mobile only */
-.mobile-screen img{
-width:100%;
-max-width:76%;
-}
-
-/* CONCEPT MOBILE POSITION (YOUR REQUIRED) */
-.concept{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:-160px;
-width:92%;
-max-width:600px;
-padding:20px 10px;   /* ⭐ FIX: 200 nahi, 20px */
-color:#1f1f1f;
-}
-
-.concept p{
-font-size:14px;
-line-height:1.6;
-}
-
-}
-
-</style>
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- favicons ================================================== -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="../apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="../icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="../icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="../manifest" href="site.webmanifest">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            padding-top: 70px;
+        }
+        /* POSTER LOGO (RENAMED TO AVOID HEADER CONFLICT) */
+        
+        .poster-logo {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        .poster-logo img {
+            width: 380px;
+        }
+        /* POSTER */
+        
+        .poster-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: visible;
+        }
+        
+        .poster {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* MOBILE SCREEN */
+        
+        .mobile-screen {
+            position: absolute;
+            top: 17%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 59%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* IMPORTANT */
+        }
+        
+        .mobile-screen img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            /* ensure no margin */
+            padding: 0;
+        }
+        /* FLOATING CHIPS */
+        
+        .chip-left {
+            position: absolute;
+            top: 8%;
+            width: 330px;
+            z-index: 20;
+        }
+        
+        .chip-right {
+            position: absolute;
+            bottom: 9%;
+            right: 5%;
+            width: 600px;
+            z-index: 20;
+        }
+        /* CONCEPT */
+        
+        .concept {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 1000px;
+            width: 90%;
+            color: #1f1f1f;
+        }
+        
+        .concept h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .concept p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+        /* MOBILE */
+        
+        @media(max-width:768px) {
+            .poster-logo img {
+                width: 140px;
+                margin-top: 25px;
+                margin-left: -5px;
+            }
+            .chip-left {
+                width: 90px;
+                margin-top: -10px;
+            }
+            .chip-right {
+                width: 200px;
+                bottom: 30px;
+                right: -17px;
+            }
+            .mobile-screen {
+                top: 19%;
+                width: 59%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                /* center hatao */
+                gap: 5px;
+                /* ensure no flex gap */
+            }
+            .mobile-screen img {
+                display: block;
+                /* ⭐ removes inline gap */
+                width: 100%;
+                max-width: 100%;
+                /* 76% hatao warna shrink hoga */
+                margin: 0;
+                /* ensure no margin */
+            }
+            .concept {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -236px;
+                width: 92%;
+                max-width: 600px;
+                padding: 20px 10px;
+            }
+            .concept p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- # site header 
+        ================================================== -->
+    <header class="s-header">
+        <div class="row s-header__inner">
 
-<!-- HEADER -->
-<header class="s-header">
-<div class="s-header__inner">
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="../index.html">
+                        <!-- <img src="images/logo.svg" alt="Homepage"> -->
+                    </a>
+                </div>
 
-<button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-<span></span>
-<span></span>
-<span></span>
-</button>
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <!-- end s-header__block -->
 
-<nav class="s-header__nav" id="mobileMenu">
-<ul class="s-header__menu-links">
-<li><a href="../index.html#intro">Intro</a></li>
-<li><a href="../index.html#about">About</a></li>
-<li><a href="../index.html#works">Works</a></li>
-<li><a href="../index.html#footer">Contact</a></li>
-</ul>
-</nav>
+            <nav class="s-header__nav">
+                <ul class="s-header__menu-links">
+                    <li>
+                        <a href="../index.html#intro">Intro</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#works">Works</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#footer">Contact</a>
+                    </li>
+                </ul>
+            </nav>
 
-</div>
-</header>
+        </div>
+        <!-- end s-header__inner -->
+    </header>
+    <!-- end s-header -->
+    <!-- ===== POSTER ===== -->
+    <div class="poster-wrapper">
+
+        <div class="poster-logo">
+            <img src="../images/IndiaPlay/1.png" alt="Logo">
+        </div>
+
+        <img src="../images/IndiaPlay/2.png" class="chip-left" alt="">
+        <img src="../images/IndiaPlay/3.png" class="chip-right" alt="">
+
+        <div class="mobile-screen">
+            <img src="../images/IndiaPlay/4.png" alt="">
+            <img src="../images/IndiaPlay/5.png" alt="">
+            <img src="../images/IndiaPlay/6.png" alt="">
+        </div>
+
+        <img src="../images/IndiaPlay/7.png" class="poster" alt="Poster">
+
+        <div class="concept">
+            <h5>CONCEPT :</h5>
+
+            <p>The “India Ke Sabse Rewarding Platform Par” campaign for Indiaplays is a bold and energetic visual narrative designed to position the brand as India’s go-to destination for skill-based gaming and real-money entertainment.</p>
+
+            <br>
+
+            <p>The campaign transforms everyday users into celebrated players through immersive storytelling.</p>
+
+            <br>
+
+            <p>It highlights rewards, excitement, and competitive spirit.</p>
+
+        </div>
+
+    </div>
 
 
-<!-- LOGO -->
-<div class="logo">
-<img src="../images/IndiaPlay/1.png" alt="Logo">
-</div>
-
-
-<!-- POSTER -->
-<div class="poster-wrapper">
-
-<img src="../images/IndiaPlay/2.png" class="chip-left" alt="">
-<img src="../images/IndiaPlay/3.png" class="chip-right" alt="">
-
-<div class="mobile-screen">
-<img src="../images/IndiaPlay/4.png" alt="">
-<img src="../images/IndiaPlay/5.png" alt="">
-<img src="../images/IndiaPlay/6.png" alt="">
-</div>
-
-<img src="../images/IndiaPlay/7.png" class="poster" alt="Poster">
-
-<div class="concept">
-<h5>CONCEPT :</h5>
-
-<p>The “India Ke Sabse Rewarding Platform Par” campaign for Indiaplays is a bold and energetic visual narrative designed to position the brand as India’s go-to destination for skill-based gaming and real-money entertainment.</p>
-
-<br>
-
-<p>The campaign transforms everyday users into celebrated players through immersive storytelling.</p>
-
-<br>
-
-<p>It highlights rewards, excitement, and competitive spirit.</p>
-
-</div>
-
-</div>
-
-
-<!-- TOGGLE SCRIPT -->
-<script>
-
-const toggle = document.getElementById("mobileToggle");
-const menu   = document.getElementById("mobileMenu");
-
-toggle.addEventListener("click", () => {
-
-toggle.classList.toggle("active");   // hamburger -> X
-menu.classList.toggle("active");     // slide menu
-
-});
-
-</script>
-
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
