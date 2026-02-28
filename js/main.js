@@ -160,7 +160,7 @@
 
             const lightbox = GLightbox({
                 selector: '.glightbox',
-                zoomable: false,
+                zoomable: true,
                 touchNavigation: true,
                 loop: false,
                 autoplayVideos: true,

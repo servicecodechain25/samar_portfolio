@@ -4027,7 +4027,7 @@ td:last-child {
     vertical-align: bottom;
     transition: all 0.3s ease-in-out;
     margin: 0;
-    height: 450px;
+    height: 250px;
 }
 
 .folio-entries .entry__link::before {
@@ -4540,9 +4540,10 @@ td:last-child {
 
 .entry__thumb img {
     width: 300%;
-    height: 300px;
+    height: 250px;
     /* display: block; */
-    object-fit: cover;
+    object-fit: contain;
+    background: #fff;
 }
 
 
@@ -4696,4 +4697,7 @@ td:last-child {
     .menu-close-btn {
         display: none;
     }
+}
+.cursor-pointer{
+    cursor: pointer;
 }
