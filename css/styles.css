@@ -2758,7 +2758,7 @@ td:last-child {
 .section-header {
     display: flex;
     align-items: flex-start;
-    margin-bottom: var(--vspace-3_5);
+    margin-bottom: var(--vspace-1);
     position: relative;
 }
 
@@ -3208,7 +3208,7 @@ td:last-child {
     display: block;
     font-family: var(--font-1);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: var(--vspace-1);
     color: var(--color-gray-14);
     padding: 0 1.2rem;
@@ -3911,7 +3911,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 
 .s-about {
-    padding-top: var(--vspace-7);
+    padding-top: var(--vspace-1);
     color: var(--color-3);
 }
 
@@ -4262,7 +4262,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 
 .s-footer {
-    --bottom-padding: var(--vspace-2_5);
+    --bottom-padding: var(--vspace-0_5);
     background-color: var(--color-3);
     margin-top: auto;
     padding-top: var(--vspace-6);
