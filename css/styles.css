@@ -3921,7 +3921,7 @@ td:last-child {
  * -------------------------------------------------------------------- */
 
 .s-about__blocks {
-    margin-top: var(--vspace-3);
+    margin-top: var(--vspace-1);
 }
 
 .s-about__blocks .s-about__block-title {
@@ -3986,7 +3986,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 
 .s-works {
-    padding-top: var(--vspace-6);
+    padding-top: var(--vspace_0_5);
     padding-bottom: var(--vspace-1);
 }
 
@@ -4265,7 +4265,7 @@ td:last-child {
     --bottom-padding: var(--vspace-0_5);
     background-color: var(--color-3);
     margin-top: auto;
-    padding-top: var(--vspace-6);
+    padding-top: var(--vspace-1);
     padding-bottom: var(--bottom-padding);
     color: var(--color-gray-15);
 }
