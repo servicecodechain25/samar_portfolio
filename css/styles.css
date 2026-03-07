@@ -4519,10 +4519,15 @@ td:last-child {
 
 
 /* Medium screens (≥768px) */
-
+.GreatWhite{
+        padding: 6rem;
+    }
 @media (min-width: 768px) {
     .folio-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .GreatWhite{
+        padding: 3rem;
     }
 }
 
@@ -4531,7 +4536,10 @@ td:last-child {
 
 @media (min-width: 992px) {
     .folio-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .GreatWhite{
+        padding: 6rem;
     }
 }
 
@@ -4540,7 +4548,7 @@ td:last-child {
 
 .entry__thumb img {
     width: 300%;
-    height: 250px;
+    height: 180px;
     /* display: block; */
     object-fit: contain;
     background: #fff;
