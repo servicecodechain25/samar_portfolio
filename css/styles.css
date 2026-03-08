@@ -2743,7 +2743,7 @@ td:last-child {
 }
 
 .text-display-title {
-    font-size: var(--text-display-1);
+    font-size: var(--text-xl);
     line-height: 1.0717;
     letter-spacing: -0.015em;
     margin-top: 0;
@@ -2947,7 +2947,7 @@ td:last-child {
 
 @media screen and (max-width: 1400px) {
     .section-header .text-display-title {
-        font-size: var(--text-xxxl);
+        font-size: var(--text-xl);
     }
     .section-header::before {
         font-size: 8.6em;
