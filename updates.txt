@@ -7,4 +7,4 @@ more project
 07 march 2026 - updated all project, project grid 4
 08 march 2025 - updated thumbnails, Resume added, remove award column
 10 march 2026 - New thumbnails, about image
-11 march 2026 - live, upadate
+11 march 2026 - live, upadate fix
